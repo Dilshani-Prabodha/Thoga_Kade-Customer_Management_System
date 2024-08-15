@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="542.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WelcomePageController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="562.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/welcome_page.jpeg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="405.0" layoutY="-1.0" opacity="0.63" stroke="BLACK" strokeType="INSIDE" width="542.0" />
+      <Label layoutX="14.0" layoutY="33.0" prefHeight="84.0" prefWidth="354.0" text="WELCOME" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="60.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="106.0" fitWidth="145.0" layoutX="396.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/shop_logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="168.0" layoutY="153.0" text="Thoga Kade " textFill="#ffabab">
+         <font>
+            <Font name="Dom Casual BT" size="96.0" />
+         </font>
+      </Label>
+      <Label layoutX="171.0" layoutY="296.0" text="Customer Management System" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="209.0" layoutY="127.0" text="to" textFill="#fffdb5">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="271.0" layoutY="347.0" onAction="#btnGoToDashFormOnAction" prefHeight="30.0" prefWidth="251.0" style="-fx-background-color: #20bf6b;" text="Go To Dash Form ---&gt;" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
