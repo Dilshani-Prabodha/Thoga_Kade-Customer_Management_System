@@ -35,11 +35,24 @@ public class DashFormController {
 
     @FXML
     void btnSearchCustomerOnAction(ActionEvent event) {
-
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/search_customer_form.fxml"))));
+            stage.show();
+        } catch (IOException e) {
+            new Alert(Alert.AlertType.WARNING, "Error : "+e);
+        }
     }
 
     @FXML
     void btnUpdateCustomerOnAction(ActionEvent event) {
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/update_customer_form.fxml"))));
+            stage.show();
+        } catch (IOException e) {
+            new Alert(Alert.AlertType.WARNING, "Error : "+e);
+        }
 
     }
 

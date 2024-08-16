@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewCustomerFormController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewCustomerFormController">
    <children>
       <ImageView fitHeight="340.0" fitWidth="655.0" layoutX="-20.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
          <image>

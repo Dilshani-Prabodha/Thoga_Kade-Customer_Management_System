@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
@@ -8,12 +9,12 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="379.0" prefWidth="562.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddCustomerFormController">
    <children>
-      <ImageView fitHeight="311.0" fitWidth="570.0" layoutX="-1.0" layoutY="68.0" opacity="0.2" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="311.0" fitWidth="570.0" layoutX="-1.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/crud_operation_page.jpg" />
          </image>
@@ -28,32 +29,48 @@
             <Image url="@../img/shop_logo.png" />
          </image>
       </ImageView>
-      <JFXTextField fx:id="txtId" focusColor="BLACK" layoutX="194.0" layoutY="91.0" prefHeight="31.0" prefWidth="188.0" promptText="Customer ID" unFocusColor="BLACK">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="311.0" layoutX="-1.0" layoutY="68.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="570.0" />
+      <JFXTextField fx:id="txtId" focusColor="#3619da" layoutX="194.0" layoutY="91.0" prefHeight="31.0" prefWidth="188.0" promptText="Customer ID" unFocusColor="BLACK">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
       </JFXTextField>
       <ComboBox fx:id="cmbTitle" layoutX="196.0" layoutY="145.0" prefHeight="31.0" prefWidth="72.0" promptText="Title" />
-      <JFXTextField fx:id="txtName" focusColor="BLACK" layoutX="280.0" layoutY="145.0" prefHeight="31.0" prefWidth="225.0" promptText="Customer Name" unFocusColor="BLACK">
+      <JFXTextField fx:id="txtName" focusColor="#3619da" layoutX="280.0" layoutY="145.0" prefHeight="31.0" prefWidth="225.0" promptText="Customer Name" unFocusColor="BLACK">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
       </JFXTextField>
-      <JFXTextField fx:id="txtAddress" focusColor="BLACK" layoutX="197.0" layoutY="190.0" prefHeight="31.0" prefWidth="188.0" promptText="Customer Address" unFocusColor="BLACK">
+      <JFXTextField fx:id="txtAddress" focusColor="#3619da" layoutX="197.0" layoutY="190.0" prefHeight="31.0" prefWidth="188.0" promptText="Customer Address" unFocusColor="BLACK">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
       </JFXTextField>
-      <JFXTextField fx:id="txtContactNumber" focusColor="BLACK" layoutX="194.0" layoutY="235.0" prefHeight="31.0" prefWidth="195.0" promptText="Customer Contact Number" unFocusColor="BLACK">
+      <JFXTextField fx:id="txtContactNumber" focusColor="#3619da" layoutX="194.0" layoutY="235.0" prefHeight="31.0" prefWidth="195.0" promptText="Customer Contact Number" unFocusColor="BLACK">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
       </JFXTextField>
       <DatePicker fx:id="dateDob" layoutX="190.0" layoutY="288.0" prefHeight="25.0" prefWidth="188.0" promptText="Date of Birth" />
       <Button layoutX="327.0" layoutY="338.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="27.0" prefWidth="65.0" style="-fx-background-color: #1e3799;" text="ADD" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <Button layoutX="408.0" layoutY="338.0" mnemonicParsing="false" onAction="#btnHomeOnAction" prefHeight="27.0" prefWidth="65.0" style="-fx-background-color: #2f3542;" text="HOME" textFill="WHITE">
          <font>

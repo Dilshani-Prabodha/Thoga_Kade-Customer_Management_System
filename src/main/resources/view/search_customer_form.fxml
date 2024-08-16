@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="380.0" prefWidth="570.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchCustomerFormController">
+   <children>
+      <ImageView fitHeight="311.0" fitWidth="570.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/crud_operation_page.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="319.0" layoutY="69.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="570.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="61.0" layoutY="66.0" opacity="0.42" stroke="WHITE" strokeType="INSIDE" width="570.0" />
+      <Label prefHeight="69.0" prefWidth="570.0" style="-fx-background-color: #f1c40f;" text="         SEARCH CUSTOMERS FORM" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="90.0" fitWidth="120.0" layoutX="-15.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/shop_logo.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="409.0" layoutY="339.0" mnemonicParsing="false" onAction="#btnHomeOnAction" prefHeight="27.0" prefWidth="65.0" style="-fx-background-color: #2f3542;" text="HOME" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="491.0" layoutY="339.0" mnemonicParsing="false" onAction="#btnCancelOnAction" prefHeight="27.0" prefWidth="65.0" style="-fx-background-color: #6F1E51;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <JFXTextField fx:id="txtSearchHere" focusColor="#f1c40f" layoutX="142.0" layoutY="83.0" prefHeight="25.0" prefWidth="238.0" promptText="Search Here by Using Customer ID" unFocusColor="BLACK">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Button layoutX="405.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="27.0" prefWidth="99.0" style="-fx-background-color: #f39c12;" text="SEARCH" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="txtSearchedName" layoutX="253.0" layoutY="173.0" prefHeight="25.0" prefWidth="238.0" />
+      <Label layoutX="41.0" layoutY="175.0" text="Customer Name" textFill="WHITE">
+         <font>
+            <Font name="Headline MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSearchedAddress" layoutX="253.0" layoutY="216.0" prefHeight="25.0" prefWidth="238.0" />
+      <Label layoutX="41.0" layoutY="218.0" text="Customer Address" textFill="WHITE">
+         <font>
+            <Font name="Headline MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSearchedContatcNo" layoutX="253.0" layoutY="258.0" prefHeight="25.0" prefWidth="238.0" />
+      <Label layoutX="41.0" layoutY="260.0" text="Customer Contact No." textFill="WHITE">
+         <font>
+            <Font name="Headline MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSearchedDob" layoutX="253.0" layoutY="300.0" prefHeight="25.0" prefWidth="238.0" />
+      <Label layoutX="41.0" layoutY="302.0" text="Customer Date of Birth" textFill="WHITE">
+         <font>
+            <Font name="Headline MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="9.0" layoutY="142.0" text="Customer ID" textFill="#5ce868">
+         <font>
+            <Font name="Headline MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSearcheId" layoutX="117.0" layoutY="139.0" prefHeight="25.0" prefWidth="73.0" />
+   </children>
+</AnchorPane>

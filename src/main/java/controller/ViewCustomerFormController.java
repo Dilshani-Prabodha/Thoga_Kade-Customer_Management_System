@@ -1,13 +1,27 @@
 package controller;
 
+import db.ThogaKadePOS;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import model.Customer;
 
-public class ViewCustomerFormController {
+import java.net.URL;
+import java.util.List;
+import java.util.ResourceBundle;
 
+public class ViewCustomerFormController implements Initializable {
+
+    public TableView tblCustomer;
+    public TableColumn colId;
+    public TableColumn colName;
+    public TableColumn colAddress;
+    public TableColumn colContactNumber;
+    public TableColumn colDob;
     @FXML
     private ComboBox<?> cmbViewTitle;
 
@@ -26,9 +40,42 @@ public class ViewCustomerFormController {
     @FXML
     private TextField txtViewName;
 
-    @FXML
-    void btnCancelOnAction(ActionEvent event) {
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        colId.setCellValueFactory(new PropertyValueFactory<>("id"));
+        colName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
+        colContactNumber.setCellValueFactory(new PropertyValueFactory<>("contactNumber"));
+        colDob.setCellValueFactory(new PropertyValueFactory<>("dob"));
 
+        loardTable();
+
+        tblCustomer.getSelectionModel().selectedItemProperty().addListener((observableValue, oldValue, newValue) ->{
+            setTextToValue((Customer) newValue);
+        });
+    }
+
+    private void setTextToValue(Customer newValue){
+        txtViewId.setText(newValue.getId());
+        //cmbViewTitle.setValue(newValue.getTitle());
+        txtViewName.setText(newValue.getName());
+        txtViewAddress.setText(newValue.getAddress());
+        txtViewContactNumber.setText(newValue.getContactNumber());
+        dateViewDob.setValue(newValue.getDob());
+    }
+
+    @FXML
+    void btnReloardOnAction(ActionEvent event) {
+        loardTable();
+    }
+
+    public void loardTable(){
+        List<Customer> customerList = ThogaKadePOS.getInstance().getConnection();
+        ObservableList<Customer> customerObsevableList = FXCollections.observableArrayList();
+        customerList.forEach(obj->{
+            customerObsevableList.add(obj);
+        });
+        tblCustomer.setItems(customerObsevableList);
     }
 
     @FXML
@@ -37,8 +84,9 @@ public class ViewCustomerFormController {
     }
 
     @FXML
-    void btnReloardOnAction(ActionEvent event) {
+    void btnCancelOnAction(ActionEvent event) {
 
     }
+
 
 }
