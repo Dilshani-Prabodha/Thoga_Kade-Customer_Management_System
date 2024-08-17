@@ -4,10 +4,14 @@ import com.jfoenix.controls.JFXTextField;
 import db.ThogaKadePOS;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import model.Customer;
 
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 
@@ -38,7 +42,13 @@ public class DeleteCustomerFormController extends SearchCustomerFormController{
 
     @FXML
     void btnHomeOnAction(ActionEvent event) {
-
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/dash_form.fxml"))));
+            stage.show();
+        } catch (IOException e) {
+            new Alert(Alert.AlertType.WARNING, "Error : "+e);
+        }
     }
 
     @FXML

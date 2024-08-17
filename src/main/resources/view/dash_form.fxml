@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -8,8 +9,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="344.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashFormController">
+<AnchorPane prefHeight="344.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashFormController">
    <children>
       <ImageView fitHeight="342.0" fitWidth="612.0" layoutX="-6.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -31,26 +31,41 @@
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
       <JFXButton layoutX="361.0" layoutY="208.0" onAction="#btnUpdateCustomerOnAction" prefHeight="35.0" prefWidth="184.0" style="-fx-background-color: #c44569;" text="UPDATE Customer" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
       <JFXButton layoutX="361.0" layoutY="257.0" onAction="#btnDeleteCustomerOnAction" prefHeight="35.0" prefWidth="184.0" style="-fx-background-color: #c44569;" text="DELETE Customer" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
       <JFXButton layoutX="361.0" layoutY="159.0" onAction="#btnSearchCustomerOnAction" prefHeight="35.0" prefWidth="184.0" style="-fx-background-color: #c44569;" text="SEARCH Customer" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
       <JFXButton layoutX="361.0" layoutY="305.0" onAction="#btnViewCustomerOnAction" prefHeight="35.0" prefWidth="184.0" style="-fx-background-color: #c44569;" text="VIEW Customer" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
       <JFXButton layoutX="530.0" layoutY="366.0" onAction="#btnExitOnAction" prefHeight="27.0" prefWidth="58.0" style="-fx-background-color: #ffffff;" text="EXIT">
          <font>

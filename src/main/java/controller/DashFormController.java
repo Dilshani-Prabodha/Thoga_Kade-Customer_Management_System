@@ -1,5 +1,6 @@
 package controller;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -36,7 +37,7 @@ public class DashFormController {
 
     @FXML
     void btnExitOnAction(ActionEvent event) {
-
+        Platform.exit();
     }
 
     @FXML

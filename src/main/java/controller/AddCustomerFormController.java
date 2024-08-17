@@ -6,11 +6,16 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.stage.Stage;
 import model.Customer;
 
+import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.List;
@@ -55,17 +60,24 @@ public class AddCustomerFormController implements Initializable {
         String contactNumber = txtContactNumber.getText();
         LocalDate dob = dateDob.getValue();
 
-        Customer customer = new Customer(id, title, name, address, contactNumber, dob);
-        System.out.println(customer);
-
         List<Customer> customerList = ThogaKadePOS.getInstance().getConnection();
-        customerList.add(customer);
+        boolean isExistsId = customerList.stream().anyMatch(customer -> customer.getId().equals(id));
 
-        Clear();
+        if(isExistsId){
+            new Alert(Alert.AlertType.WARNING, "Customer ID "+id+" already exists. Please use a different ID.").show();
+            txtId.setText("");
+        }else {
+            Customer customer = new Customer(id, title, name, address, contactNumber, dob);
+            System.out.println(customer);
 
+            customerList.add(customer);
+
+            new Alert(Alert.AlertType.INFORMATION, id+" Customer added successfully...").show();
+            clear();
+        }
     }
 
-    public void Clear(){
+    public void clear(){
         txtId.setText("");
         cmbTitle.setValue("Title");
         txtName.setText("");
@@ -76,11 +88,17 @@ public class AddCustomerFormController implements Initializable {
 
     @FXML
     void btnCancelOnAction(ActionEvent event) {
-
+        clear();
     }
 
     @FXML
     void btnHomeOnAction(ActionEvent event) {
-
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/dash_form.fxml"))));
+            stage.show();
+        } catch (IOException e) {
+            new Alert(Alert.AlertType.WARNING, "Error : "+e);
+        }
     }
 }
