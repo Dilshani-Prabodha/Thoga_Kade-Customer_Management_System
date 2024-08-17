@@ -53,14 +53,18 @@ public class SearchCustomerFormController {
 
         if(!customerFound){
                 new Alert(Alert.AlertType.ERROR, id+" Customer Not Found...Please Check Again.").show();
-                txtSearcheId.setText("");
-                txtSearchedName.setText("");
-                txtSearchedAddress.setText("");
-                txtSearchedAddress.setText("");
-                txtSearchedContatcNo.setText("");
-                txtSearchedDob.setText("");
+                clearFeild();
         }
             txtSearchHere.setText("");
+    }
+
+    public void clearFeild(){
+        txtSearcheId.setText("");
+        txtSearchedName.setText("");
+        txtSearchedAddress.setText("");
+        txtSearchedAddress.setText("");
+        txtSearchedContatcNo.setText("");
+        txtSearchedDob.setText("");
     }
 
     @FXML
@@ -70,6 +74,6 @@ public class SearchCustomerFormController {
 
     @FXML
     void btnCancelOnAction(ActionEvent event) {
-
+        clearFeild();
     }
 }

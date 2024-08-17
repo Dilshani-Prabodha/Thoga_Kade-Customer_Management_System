@@ -11,7 +11,8 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="380.0" prefWidth="570.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchCustomerFormController">
+
+<AnchorPane prefHeight="388.0" prefWidth="570.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DeleteCustomerFormController">
    <children>
       <ImageView fitHeight="311.0" fitWidth="570.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -20,7 +21,7 @@
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="319.0" layoutY="69.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="570.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="61.0" layoutY="66.0" opacity="0.42" stroke="WHITE" strokeType="INSIDE" width="570.0" />
-      <Label prefHeight="69.0" prefWidth="570.0" style="-fx-background-color: #f1c40f;" text="         SEARCH CUSTOMERS FORM" textFill="WHITE">
+      <Label prefHeight="69.0" prefWidth="570.0" style="-fx-background-color: #c23616;" text="         DELETE CUSTOMERS FORM" textFill="WHITE">
          <font>
             <Font name="System Bold" size="35.0" />
          </font>
@@ -45,7 +46,7 @@
             <Font size="15.0" />
          </font>
       </JFXTextField>
-      <Button layoutX="405.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="27.0" prefWidth="99.0" style="-fx-background-color: #f39c12;" text="SEARCH" textFill="WHITE">
+      <Button layoutX="405.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="27.0" prefWidth="99.0" style="-fx-background-color: #82589F;" text="SEARCH" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -53,35 +54,63 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TextField fx:id="txtSearchedName" layoutX="253.0" layoutY="173.0" prefHeight="25.0" prefWidth="238.0" />
-      <Label layoutX="41.0" layoutY="175.0" text="Customer Name" textFill="WHITE">
+      <TextField fx:id="txtSearchedName" layoutX="253.0" layoutY="175.0" prefHeight="25.0" prefWidth="238.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label layoutX="41.0" layoutY="177.0" text="Customer Name" textFill="WHITE">
          <font>
             <Font name="Headline MT Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtSearchedAddress" layoutX="253.0" layoutY="216.0" prefHeight="25.0" prefWidth="238.0" />
+      <TextField fx:id="txtSearchedAddress" layoutX="253.0" layoutY="216.0" prefHeight="25.0" prefWidth="238.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
       <Label layoutX="41.0" layoutY="218.0" text="Customer Address" textFill="WHITE">
          <font>
             <Font name="Headline MT Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtSearchedContatcNo" layoutX="253.0" layoutY="258.0" prefHeight="25.0" prefWidth="238.0" />
+      <TextField fx:id="txtSearchedContatcNo" layoutX="253.0" layoutY="258.0" prefHeight="25.0" prefWidth="238.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
       <Label layoutX="41.0" layoutY="260.0" text="Customer Contact No." textFill="WHITE">
          <font>
             <Font name="Headline MT Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtSearchedDob" layoutX="253.0" layoutY="300.0" prefHeight="25.0" prefWidth="238.0" />
+      <TextField fx:id="txtSearchedDob" layoutX="253.0" layoutY="300.0" prefHeight="25.0" prefWidth="238.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
       <Label layoutX="41.0" layoutY="302.0" text="Customer Date of Birth" textFill="WHITE">
          <font>
             <Font name="Headline MT Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="9.0" layoutY="142.0" text="Customer ID" textFill="#5ce868">
+      <TextField fx:id="txtSearcheId" layoutX="253.0" layoutY="137.0" prefHeight="25.0" prefWidth="99.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label layoutX="41.0" layoutY="140.0" text="Customer ID" textFill="WHITE">
          <font>
             <Font name="Headline MT Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtSearcheId" layoutX="117.0" layoutY="139.0" prefHeight="25.0" prefWidth="73.0" />
+      <Button layoutX="310.0" layoutY="339.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="27.0" prefWidth="84.0" style="-fx-background-color: #c23616;" text="DELETE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>

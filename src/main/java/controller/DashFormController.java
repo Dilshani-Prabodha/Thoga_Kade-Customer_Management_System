@@ -25,7 +25,13 @@ public class DashFormController {
 
     @FXML
     void btnDeleteCustomerOnAction(ActionEvent event) {
-
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/delete_customer_form.fxml"))));
+            stage.show();
+        } catch (IOException e) {
+            new Alert(Alert.AlertType.WARNING, "Error : "+e);
+        }
     }
 
     @FXML
